@@ -3,13 +3,12 @@ import { Jost } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/includes/Sidebar";
 import TargetCursor from "@/components/TargetCursor";
-
+import Lanyard from "@/components/Lanyard";
 
 const jostSans = Jost({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Portofolio - Faiz Muazzam",
@@ -26,15 +25,24 @@ export default function RootLayout({
       <body
         className={`${jostSans.className} antialiased dark`}
       >
-        <main className="main wrapper">
+        <main className="main wrapper relative w-full overflow-x-hidden">
+          <div className="absolute w-[1092px] top-0 right-0">
+            <div className="relative">
+              <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+            </div>
+          </div>
           <TargetCursor
             spinDuration={2}
             hideDefaultCursor={true}
           />
           <div className="block min-h-screen w-screen overflow-x-hidden">
-            <Sidebar />
-            <div className="content ml-[360px] py-32 px-4">
-              {children}
+            <div className="flex max-w-[1320px] m-auto pt-32">
+              <div className="w-[400px]">
+                <Sidebar />
+              </div>
+              <div className="flex-1 content px-4">
+                {children}
+              </div>
             </div>
           </div>
         </main>
