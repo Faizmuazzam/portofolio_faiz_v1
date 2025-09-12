@@ -1,12 +1,18 @@
-import type { Metadata } from "next";
-import { Jost } from "next/font/google";
-import "./globals.css";
-import Sidebar from "@/includes/Sidebar";
-import TargetCursor from "@/components/TargetCursor";
 import Lanyard from "@/components/Lanyard";
+import Squares from "@/components/Squares";
+import TargetCursor from "@/components/TargetCursor";
+import Sidebar from "@/includes/Sidebar";
+import type { Metadata } from "next";
+import { Figtree, Playfair_Display } from "next/font/google";
+import "./globals.css";
 
-const jostSans = Jost({
-  variable: "--font-geist-sans",
+const figtreeSans = Figtree({
+  variable: "--font-figtree-sans",
+  subsets: ["latin"],
+});
+
+const playfairSans = Playfair_Display({
+  variable: "--font-playfair-sans",
   subsets: ["latin"],
 });
 
@@ -21,28 +27,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <body
-        className={`${jostSans.className} antialiased dark`}
-      >
+    <html lang="en" className={`${figtreeSans.variable} ${playfairSans.variable}`}>
+      <body className={`antialiased dark`}>
         <main className="main wrapper relative w-full overflow-x-hidden">
-          <div className="absolute w-[1092px] top-0 right-0">
-            <div className="relative">
-              <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
-            </div>
+          <div className="absolute inset-0 z-0">
+            <Squares
+              speed={0.5}
+              squareSize={35}
+              direction="diagonal" // up, down, left, right, diagonal
+              borderColor="#ff6a00ff"
+              hoverFillColor="#ff6a00ff"
+            />
           </div>
-          <TargetCursor
-            spinDuration={2}
-            hideDefaultCursor={true}
-          />
-          <div className="block min-h-screen w-screen overflow-x-hidden">
-            <div className="flex max-w-[1320px] m-auto pt-32">
+          <div className="absolute inset-0 z-10">
+            <div className="bg-black opacity-70 w-full h-full"></div>
+          </div>
+          <TargetCursor spinDuration={2} hideDefaultCursor={true} />
+          <div className="block min-h-screen w-screen overflow-x-hidden relative z-20">
+            <div className="absolute w-[1092px] top-0 right-0 translate-x-[30%] z-0">
+              <div className="relative">
+                <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+              </div>
+            </div>
+            <div className="relative z-10 h-[87px]">
+
+            </div>
+            <div className="flex max-w-[1320px] m-auto relative z-10">
               <div className="w-[400px]">
                 <Sidebar />
               </div>
-              <div className="flex-1 content px-4">
-                {children}
-              </div>
+              <div className="flex-1 content px-5 pt-20">{children}</div>
             </div>
           </div>
         </main>

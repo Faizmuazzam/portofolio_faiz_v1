@@ -1,24 +1,28 @@
 "use client";
 
-
-import ProfileCard from '@/components/ProfileCard';
+import ProfileCard from "@/components/ProfileCard";
+import { Icon } from "@iconify-icon/react";
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
+import { MenuItem } from "./components/MenuItem";
 
 const Sidebar = () => {
+  const [hovered, setHovered] = useState(false);
   return (
     <div className="sidebar">
       <div className="hide md:flex justify-center w-full">
-        <div className="sticky top-0">
+        <div className="pt-20">
           <div className="relative">
-          <ProfileCard
-            name="Faiz Muazzam"
-            title="Web Developer"
-            handle="faizmuazzam"
-            status="Online"
-            contactText="Contact Me"
-            avatarUrl="/assets/img/me_transparent.png"
-            grainUrl="/assets/img/grain.webp"
-            iconUrl="/assets/img/iconpattern.png"
-            behindGradient={`radial-gradient(
+            <ProfileCard
+              name="Faiz Muazzam"
+              title="Web Developer"
+              handle="faizmuazzam"
+              status="Online"
+              contactText="Contact Me"
+              avatarUrl="/assets/img/me_transparent.png"
+              grainUrl="/assets/img/grain.webp"
+              iconUrl="/assets/img/iconpattern.png"
+              behindGradient={`radial-gradient(
               farthest-side circle at var(--pointer-x) var(--pointer-y),
               hsla(30, 100%, 80%, var(--card-opacity)) 4%,
               hsla(30, 80%, 70%, calc(var(--card-opacity)*0.75)) 10%,
@@ -34,17 +38,28 @@ const Sidebar = () => {
               #ffc200ff 60%,
               #ff6a00ff 100%
             )`}
-            innerGradient={`linear-gradient(145deg, #ff9f008c 0%, #ffd58044 100%)`}
-            showUserInfo={true}
-            enableTilt={true}
-            enableMobileTilt={false}
-            onContactClick={() => console.log('Contact clicked')}
-          />
+              innerGradient={`linear-gradient(145deg, #ff9f008c 0%, #ffd58044 100%)`}
+              showUserInfo={true}
+              enableTilt={true}
+              enableMobileTilt={false}
+              onContactClick={() => console.log("Contact clicked")}
+            />
+
+            <div className="absolute -left-7 top-0 -translate-x-full w-20">
+              <div className="flex flex-col gap-y-4 w-full">
+                <MenuItem label="Home" icon="lets-icons:home-duotone" />
+                <MenuItem label="About Us" icon="duo-icons:id-card" />
+                <MenuItem label="Services" icon="duo-icons:briefcase" />
+                <MenuItem label="My Skill" icon="uim:rocket" />
+                <MenuItem label="Portofolio" icon="pepicons-print:folder" />
+                <MenuItem label="Contact Us" icon="duo-icons:message" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

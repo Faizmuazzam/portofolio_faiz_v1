@@ -1,11 +1,13 @@
-import React from 'react'
-import Lanyard from '@/components/Lanyard'
+import About from "./section/About";
+import Home from "./section/Home";
 
-
-const Home = () => {
+const Page = () => {
   return (
-    <div className=""></div>
-  )
-}
+    <>
+      <Home />
+      <About />
+    </>
+  );
+};
 
-export default Home
+export default Page;
