@@ -3,15 +3,37 @@
 import ProfileCard from "@/components/ProfileCard";
 import { Icon } from "@iconify-icon/react";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
-import { MenuItem } from "./components/MenuItem";
+import { useEffect, useRef, useState } from "react";
+import { MenuItem } from "../app/section/components/MenuItem";
 
 const Sidebar = () => {
   const [hovered, setHovered] = useState(false);
+  const sidebarRef = useRef<HTMLDivElement>(null);
+  const [isFixed, setIsFixed] = useState(false);
+
+  useEffect(() => {
+    if (!sidebarRef.current) return;
+    const rect = sidebarRef.current.getBoundingClientRect();
+    const absoluteTop = rect.top + window.scrollY;
+
+    const handleScroll = () => {
+      if (window.scrollY > absoluteTop) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  
   return (
     <div className="sidebar">
       <div className="hide md:flex justify-center w-full">
-        <div className="pt-20">
+        <div ref={sidebarRef} className={`pt-20 transition-all duration-300 ${isFixed ? "fixed top-0" : ""
+          }`}
+        >
           <div className="relative">
             <ProfileCard
               name="Faiz Muazzam"

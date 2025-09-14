@@ -2,31 +2,22 @@ import CircularText from "@/components/CircularText";
 import TextType from "@/components/TextType";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
+import { TitleSection } from "./components/TitleSection";
+import { BoxText } from "./components/BoxText";
 
 const Home = () => {
   return (
     <div className="section-home">
-      <div className="text-2xl mb-6">
-        <span>
-          <span className="inline-block w-5 h-5 bg-amber-500 mr-3 rounded-full"></span>
-          Hi, I’m <span className="font-semibold">Faiz</span>,
-        </span>
-        <TextType
-          text={["Web Developer", "Front-End Developer"]}
-          typingSpeed={75}
-          pauseDuration={1500}
-          showCursor={true}
-          cursorCharacter="|"
-          className="inline-block ml-2"
-        />
-      </div>
-      <h3 className="text-7xl font-semibold leading-tight">
+      <TitleSection
+        topSubTitle="Hi, I’m Faiz,"
+        textSubType={["Web Developer", "Front-End Developer"]}
+      >
         <span className="block">Turning Ideas into</span>
         <div className="block pl-[60px]">
-          Experiences{" "}
+          experiences {" "}
           <span className="inline">
             <TextType
-              text={["Inspire", "Interactive"]}
+              text={["seamless", "creative", "modern", "impactful"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -35,16 +26,15 @@ const Home = () => {
               className="text-[#FFAE00] underline font-playfair italic cursor-target"
             />
           </span>
-        </div>
-      </h3>
+          
 
+        </div>
+      </TitleSection>
       <div className="flex justify-end mt-6">
         <p className="font-medium w-2/3">
-          Your gateway to innovative design, seamless user experiences, and
-          impactful solutions. Turning complex ideas into user-friendly designs.
+          From concept to deployment, I craft applications that are fast, responsive, and meaningful for users combining modern design, clean code, and seamless functionality to deliver impactful digital experiences.
         </p>
       </div>
-
       <div className="flex justify-between pr-10">
         <div className="relative block w-[133px] h-[133px] p-2 border border-white rounded-full bg-[#2c2918] cursor-target">
           <CircularText
@@ -97,21 +87,16 @@ const Home = () => {
       </div>
 
       <div className="block mt-8">
-        <a
-          href=""
-          className="flex justify-center items-center gap-5 py-10 px-16 text-center bg-opacity-30 border-2  rounded-[8px] cursor-target"
-          style={{
-            backgroundColor: "rgba(44, 41, 24, 0.65)",
-            borderColor: "rgba(255, 255, 255, .1);",
-          }}
-        >
-          <span className="text-6xl font-semibold">Lets Work Together</span>
-          <div
-            className="flex justify-center items-center w-20 h-20 -rotate-45 rounded-full cursor-target"
-            style={{ backgroundColor: "rgba(44, 41, 24, 0.75)" }}
-          >
-            <Icon icon="line-md:arrow-right" width="30" height="30" />
-          </div>
+        <a>
+          <BoxText className="flex justify-center items-center gap-5 py-10 px-16 text-center">
+            <span className="text-6xl font-semibold">Lets Work Together</span>
+            <div
+              className="flex justify-center items-center w-20 h-20 -rotate-45 rounded-full cursor-target"
+              style={{ backgroundColor: "rgba(44, 41, 24, 0.75)" }}
+            >
+              <Icon icon="line-md:arrow-right" width="30" height="30" />
+            </div>
+          </BoxText>
         </a>
       </div>
     </div>

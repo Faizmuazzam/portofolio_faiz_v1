@@ -46,7 +46,7 @@ export default function RootLayout({
           <div className="block min-h-screen w-screen overflow-x-hidden relative z-20">
             <div className="absolute w-[1092px] top-0 right-0 translate-x-[30%] z-0">
               <div className="relative">
-                <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                <Lanyard position={[0, 0, 20]} gravity={[0, -30, 0]} />
               </div>
             </div>
             <div className="relative z-10 h-[87px]">
