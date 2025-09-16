@@ -9,12 +9,12 @@ import Footer from "@/includes/Footer";
 const Page = () => {
   return (
     <>
-      <Home />
-      <About />
-      <Service />
-      <Skill />
-      <Portofolio />
-      <ContactMe />
+      <Home id="section-home" />
+      <About id="section-about" />
+      <Service id="section-service" />
+      <Skill id="section-skill" />
+      <Portofolio id="section-portofolio" />
+      <ContactMe id="section-contact" />
       <Footer />
     </>
   );

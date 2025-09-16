@@ -5,9 +5,9 @@ import { TitleSection } from "./components/TitleSection";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-const ContactMe = () => {
+const ContactMe = ({ id }: { id: string }) => {
   return (
-    <div className="section-portofolio mt-14">
+    <div className="section-portofolio mt-14" id={id}>
       <TitleSection topSubTitle="Contact Me">
         <span className="block">Let’s Build Something</span>
         <div className="block pl-[60px]">

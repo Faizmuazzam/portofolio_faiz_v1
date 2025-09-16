@@ -7,17 +7,19 @@ import { Icon } from "@iconify/react";
 interface MenuItemProps {
   label: string;
   icon: string;
+  onClick?: () => void; // ✅ callback opsional
 }
 
-export const MenuItem = ({ label, icon }: MenuItemProps) => {
+export const MenuItem = ({ label, icon, onClick }: MenuItemProps) => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a
-      href="#"
+    <button
+      type="button"
       className="relative cursor-target flex items-center justify-center cursor-pointer w-20 h-20 bg-[#2c2918] rounded-lg border border-[#58370e] text-[#8b6300] hover:bg-[#FFAE00] hover:text-[#382c0d] transition-all"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={onClick}
     >
       <Icon icon={icon} width="50" height="50" />
 
@@ -34,6 +36,6 @@ export const MenuItem = ({ label, icon }: MenuItemProps) => {
           </motion.span>
         )}
       </AnimatePresence>
-    </a>
+    </button>
   );
 };

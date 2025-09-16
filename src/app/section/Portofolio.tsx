@@ -7,9 +7,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BoxImage } from "./components/BoxImage";
 
-const Portofolio = () => {
+const Portofolio = ({ id }: { id: string }) => {
   return (
-    <div className="section-portofolio mt-14">
+    <div className="section-portofolio mt-14" id={id}>
       <TitleSection topSubTitle="My Portofolio">
         <span className="block">From Creative Concepts</span>
         <div className="block pl-[60px]">

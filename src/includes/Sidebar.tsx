@@ -1,15 +1,46 @@
 "use client";
 
 import ProfileCard from "@/components/ProfileCard";
-import { Icon } from "@iconify-icon/react";
-import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { MenuItem } from "../app/section/components/MenuItem";
+import Lenis from "@studio-freight/lenis";
 
 const Sidebar = () => {
   const [hovered, setHovered] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const [isFixed, setIsFixed] = useState(false);
+  const lenisRef = useRef<Lenis | null>(null);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 2.5, // default durasi scroll (detik)
+      easing: (t) => 1 - Math.pow(1 - t, 3), // easing custom
+    });
+
+    lenisRef.current = lenis;
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el && lenisRef.current) {
+      lenisRef.current.scrollTo(el, {
+        offset: -50, // kalau mau ada offset misalnya navbar fixed
+        duration: 2, // override durasi (detik)
+        easing: (t) => t * (2 - t), // easing quadratic
+      });
+    }
+  };
+
 
   useEffect(() => {
     if (!sidebarRef.current) return;
@@ -27,7 +58,7 @@ const Sidebar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
     <div className="sidebar">
       <div className="hide md:flex justify-center w-full">
@@ -69,12 +100,12 @@ const Sidebar = () => {
 
             <div className="absolute -left-7 top-0 -translate-x-full w-20">
               <div className="flex flex-col gap-y-4 w-full">
-                <MenuItem label="Home" icon="lets-icons:home-duotone" />
-                <MenuItem label="About Us" icon="duo-icons:id-card" />
-                <MenuItem label="Services" icon="duo-icons:briefcase" />
-                <MenuItem label="My Skill" icon="uim:rocket" />
-                <MenuItem label="Portofolio" icon="pepicons-print:folder" />
-                <MenuItem label="Contact Us" icon="duo-icons:message" />
+                <MenuItem label="Home" icon="lets-icons:home-duotone" onClick={() => scrollToSection('section-home')} />
+                <MenuItem label="About Us" icon="duo-icons:id-card" onClick={() => scrollToSection('section-about')} />
+                <MenuItem label="Services" icon="duo-icons:briefcase" onClick={() => scrollToSection('section-service')} />
+                <MenuItem label="My Skill" icon="uim:rocket" onClick={() => scrollToSection('section-skill')} />
+                <MenuItem label="Portofolio" icon="pepicons-print:folder" onClick={() => scrollToSection('section-portofolio')} />
+                <MenuItem label="Contact Us" icon="duo-icons:message" onClick={() => scrollToSection('section-contact')} />
               </div>
             </div>
           </div>

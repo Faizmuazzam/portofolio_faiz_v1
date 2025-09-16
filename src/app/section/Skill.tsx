@@ -4,9 +4,9 @@ import TextType from "@/components/TextType";
 import { BoxText } from "./components/BoxText";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
-const Skill = () => {
+const Skill = ({ id }: { id: string }) => {
   return (
-    <div className="section-skill mt-14">
+    <div className="section-skill mt-14" id={id}>
       <TitleSection topSubTitle="My Skill">
         <span className="block">From Frontend Flair</span>
         <div className="block pl-[60px]">

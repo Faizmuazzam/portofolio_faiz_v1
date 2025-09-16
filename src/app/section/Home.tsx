@@ -5,9 +5,9 @@ import Image from "next/image";
 import { TitleSection } from "./components/TitleSection";
 import { BoxText } from "./components/BoxText";
 
-const Home = () => {
+const Home = ({ id }: { id: string }) => {
   return (
-    <div className="section-home">
+    <div className="section-home" id={id}>
       <TitleSection
         topSubTitle="Hi, I’m Faiz,"
         textSubType={["Web Developer", "Front-End Developer"]}
@@ -26,7 +26,7 @@ const Home = () => {
               className="text-[#FFAE00] underline font-playfair italic cursor-target"
             />
           </span>
-          
+
 
         </div>
       </TitleSection>

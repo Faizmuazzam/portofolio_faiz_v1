@@ -2,9 +2,9 @@ import React from 'react'
 import { TitleSection } from './components/TitleSection'
 import { BoxText } from './components/BoxText';
 
-const Service = () => {
+const Service = ({ id }: { id: string }) => {
   return (
-    <div className="section-about mt-14">
+    <div className="section-about mt-14" id={id}>
       <TitleSection
         topSubTitle="My Services"
       >

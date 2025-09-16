@@ -6,11 +6,11 @@ type FormControlsProps = {
   placeholder: string;
 };
 
-const FormControls = ({ type, name, placeholder }: FormControlsProps) => {
+const FormControls = ({ type = "text", name, placeholder }: FormControlsProps) => {
   return (
     <input
       className="px-4 py-6 text-lg font-medium rounded-[8px] placeholder:text-neutral-300 focus:outline-amber-500 focus:outline-3 w-full cursor-target"
-      type={type ?? 'text'}
+      type={type}
       name={name}
       placeholder={placeholder}
       style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}

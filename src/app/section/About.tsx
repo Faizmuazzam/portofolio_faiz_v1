@@ -5,9 +5,9 @@ import { BoxText } from "@/app/section/components/BoxText";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 
-const About = () => {
+const About = ({ id }: { id: string }) => {
   return (
-    <div className="section-about mt-14">
+    <div className="section-about mt-14" id={id}>
       <TitleSection
         topSubTitle="About Me"
       >

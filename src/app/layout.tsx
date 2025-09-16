@@ -5,6 +5,7 @@ import Sidebar from "@/includes/Sidebar";
 import type { Metadata } from "next";
 import { Figtree, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Header from "@/includes/Header";
 
 const figtreeSans = Figtree({
   variable: "--font-figtree-sans",
@@ -49,9 +50,7 @@ export default function RootLayout({
                 <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
               </div>
             </div>
-            <div className="relative z-10 h-[105px]">
-
-            </div>
+            <Header />
             <div className="flex max-w-[1320px] m-auto relative z-10">
               <div className="w-[400px]">
                 <Sidebar />
