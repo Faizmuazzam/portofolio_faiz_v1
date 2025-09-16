@@ -4,6 +4,7 @@ import Service from "./section/Service";
 import Skill from "./section/Skill";
 import Portofolio from "./section/Portofolio";
 import ContactMe from "./section/ContactMe";
+import Footer from "@/includes/Footer";
 
 const Page = () => {
   return (
@@ -14,6 +15,7 @@ const Page = () => {
       <Skill />
       <Portofolio />
       <ContactMe />
+      <Footer />
     </>
   );
 };
