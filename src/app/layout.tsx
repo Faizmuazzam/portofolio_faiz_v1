@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className={`${figtreeSans.variable} ${playfairSans.variable}`}>
       <body className={`antialiased dark`}>
         <main className="main wrapper relative w-full overflow-x-hidden">
-          <div className="absolute inset-0 z-0">
+          <div className="fixed inset-0 z-0 h-screen">
             <Squares
               speed={0.5}
               squareSize={35}
@@ -49,7 +49,7 @@ export default function RootLayout({
                 <Lanyard position={[0, 0, 20]} gravity={[0, -30, 0]} />
               </div>
             </div>
-            <div className="relative z-10 h-[87px]">
+            <div className="relative z-10 h-[105px]">
 
             </div>
             <div className="flex max-w-[1320px] m-auto relative z-10">
