@@ -11,8 +11,20 @@ const Portofolio = ({ id }: { id: string }) => {
   return (
     <div className="section-portofolio mt-14" id={id}>
       <TitleSection topSubTitle="My Portofolio">
-        <span className="block">From Creative Concepts</span>
-        <div className="block pl-[60px]">
+        <motion.span
+          initial={{ opacity: 0, translateX: 150 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="block"
+        >
+          From Creative Concepts
+        </motion.span>
+        <motion.div
+          initial={{ opacity: 0, translateX: 150 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="block pl-[60px]"
+        >
           To Live{" "}
           <span className="inline">
             <TextType
@@ -25,7 +37,7 @@ const Portofolio = ({ id }: { id: string }) => {
               className="text-[#FFAE00] underline font-playfair italic cursor-target"
             />
           </span>
-        </div>
+        </motion.div>
       </TitleSection>
 
       <div className="grid grid-cols-2 gap-6 mt-16">
@@ -39,9 +51,14 @@ const Portofolio = ({ id }: { id: string }) => {
           />
         </div>
         <div className="col-span-2">
-          <h4 className="text-[32px] font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors">
+          <motion.h4
+            initial={{ opacity: 0, translateY: 100 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-[32px] font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors"
+          >
             My Portofolio | Faiz Muazzam
-          </h4>
+          </motion.h4>
         </div>
         <div className="block">
           <BoxImage
@@ -62,9 +79,14 @@ const Portofolio = ({ id }: { id: string }) => {
           />
         </div>
         <div className="col-span-2">
-          <h4 className="text-[32px] font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors">
+          <motion.h4
+            initial={{ opacity: 0, translateY: 100 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="text-[32px] font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors"
+          >
             My Portofolio | Faiz Muazzam
-          </h4>
+          </motion.h4>
         </div>
         <div className="block">
           <BoxImage

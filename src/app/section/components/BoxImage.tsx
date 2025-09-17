@@ -18,7 +18,10 @@ export const BoxImage = ({
   className,
 }: BoxImageProps) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, translateY: 100 }}
+      whileInView={{ opacity: 1, translateY: 0 }}
+      transition={{ duration: 1, delay: 0.3 }}
       className={`block rounded-[8px] overflow-hidden shadow-amber-600 cursor-target ${className}`}
     >
       <motion.div
@@ -33,6 +36,6 @@ export const BoxImage = ({
           className="block"
         />
       </motion.div>
-    </div>
+    </motion.div>
   );
 };

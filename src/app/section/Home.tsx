@@ -1,3 +1,5 @@
+"use client";
+
 import CircularText from "@/components/CircularText";
 import TextType from "@/components/TextType";
 import { Icon } from "@iconify/react/dist/iconify.js";
@@ -5,6 +7,7 @@ import Image from "next/image";
 import { TitleSection } from "./components/TitleSection";
 import { BoxText } from "./components/BoxText";
 import StarBorder from "@/components/StarBorder";
+import { motion } from "motion/react";
 
 const Home = ({ id }: { id: string }) => {
   return (
@@ -13,8 +16,20 @@ const Home = ({ id }: { id: string }) => {
         topSubTitle="Hi, I’m Faiz,"
         textSubType={["Web Developer", "Front-End Developer"]}
       >
-        <span className="block">Turning Ideas into</span>
-        <div className="block pl-[60px]">
+        <motion.span
+          initial={{ opacity: 0, translateX: 150 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="block"
+        >
+          Turning Ideas into
+        </motion.span>
+        <motion.div
+          initial={{ opacity: 0, translateX: 150 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="block pl-[60px]"
+        >
           experiences{" "}
           <span className="inline">
             <TextType
@@ -27,17 +42,27 @@ const Home = ({ id }: { id: string }) => {
               className="text-[#FFAE00] underline font-playfair italic cursor-target"
             />
           </span>
-        </div>
+        </motion.div>
       </TitleSection>
-      <div className="flex justify-end mt-6">
+      <motion.div
+        initial={{ opacity: 0, translateX: 100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="flex justify-end mt-6"
+      >
         <p className="font-medium w-2/3">
           From concept to deployment, I craft applications that are fast,
           responsive, and meaningful for users combining modern design, clean
           code, and seamless functionality to deliver impactful digital
           experiences.
         </p>
-      </div>
-      <div className="flex justify-between pr-10">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, translateX: 100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+        className="flex justify-between pr-10"
+      >
         <div className="relative block w-[133px] h-[133px] p-2 border border-white rounded-full bg-[#2c2918] cursor-target">
           <CircularText
             text="FAIZ MUAZZAM WEB DEVELOPER "
@@ -58,11 +83,16 @@ const Home = ({ id }: { id: string }) => {
             thickness={3}
           >
             <span className="flex justify-center items-center gap-x-2 px-6 py-4 font-semibold text-lg text-white">
-              Download Resume <Icon icon="line-md:cloud-alt-download-filled-loop" width="32" height="32" />
+              Download Resume{" "}
+              <Icon
+                icon="line-md:cloud-alt-download-filled-loop"
+                width="32"
+                height="32"
+              />
             </span>
           </StarBorder>
         </div>
-      </div>
+      </motion.div>
 
       <div className="block mt-8">
         <a>
