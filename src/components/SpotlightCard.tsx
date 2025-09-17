@@ -55,7 +55,7 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relativeoverflow-hidden p-8 ${className}`}
+      className={`relative overflow-hidden p-8 h-full ${className}`}
       style={style}
     >
       <div

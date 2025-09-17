@@ -4,6 +4,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import { TitleSection } from "./components/TitleSection";
 import { BoxText } from "./components/BoxText";
+import StarBorder from "@/components/StarBorder";
 
 const Home = ({ id }: { id: string }) => {
   return (
@@ -14,7 +15,7 @@ const Home = ({ id }: { id: string }) => {
       >
         <span className="block">Turning Ideas into</span>
         <div className="block pl-[60px]">
-          experiences {" "}
+          experiences{" "}
           <span className="inline">
             <TextType
               text={["seamless", "creative", "modern", "impactful"]}
@@ -26,13 +27,14 @@ const Home = ({ id }: { id: string }) => {
               className="text-[#FFAE00] underline font-playfair italic cursor-target"
             />
           </span>
-
-
         </div>
       </TitleSection>
       <div className="flex justify-end mt-6">
         <p className="font-medium w-2/3">
-          From concept to deployment, I craft applications that are fast, responsive, and meaningful for users combining modern design, clean code, and seamless functionality to deliver impactful digital experiences.
+          From concept to deployment, I craft applications that are fast,
+          responsive, and meaningful for users combining modern design, clean
+          code, and seamless functionality to deliver impactful digital
+          experiences.
         </p>
       </div>
       <div className="flex justify-between pr-10">
@@ -47,42 +49,18 @@ const Home = ({ id }: { id: string }) => {
             <Icon icon="line-md:arrow-right" width="30" height="30" />
           </div>
         </div>
-        <div className="flex items-center space-x-3">
-          {/* Avatar stack */}
-          <div className="flex -space-x-3">
-            <Image
-              src="/assets/img/me.jpg"
-              alt="User 1"
-              width={2848}
-              height={2848}
-              className="w-10 h-10 rounded-full border-2 border-white"
-            />
-            <Image
-              src="/assets/img/me.jpg"
-              alt="User 2"
-              width={2848}
-              height={2848}
-              className="w-10 h-10 rounded-full border-2 border-white"
-            />
-            <Image
-              src="/assets/img/me.jpg"
-              alt="User 3"
-              width={2848}
-              height={2848}
-              className="w-10 h-10 rounded-full border-2 border-white"
-            />
-
-            {/* Badge */}
-            <div className="w-10 h-10 rounded-full bg-[#FFAE00] flex items-center justify-center text-xs font-semibold border-2 border-white">
-              2K+
-            </div>
-          </div>
-
-          {/* Text */}
-          <div>
-            <p className="text-sm font-medium">2k+ reviews</p>
-            <p className="text-xs text-gray-400">(4.90 of 5)</p>
-          </div>
+        <div className="flex justify-center items-center">
+          <StarBorder
+            as="button"
+            className="relative  w-max max-w-full cursor-target"
+            color="#ff6a00ff"
+            speed="5s"
+            thickness={3}
+          >
+            <span className="flex justify-center items-center gap-x-2 px-6 py-4 font-semibold text-lg text-white">
+              Download Resume <Icon icon="line-md:cloud-alt-download-filled-loop" width="32" height="32" />
+            </span>
+          </StarBorder>
         </div>
       </div>
 
