@@ -18,7 +18,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="relative z-10 max-w-[1320px] mx-auto py-6">
+      <header className="relative z-10 max-w-[1320px] mx-auto py-6 xl:px-0 px-5 hidden lg:block">
         <div className="grid grid-cols-2 items-center">
           <div className="logo max-w-[110px]">
             <Image

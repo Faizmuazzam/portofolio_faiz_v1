@@ -18,15 +18,15 @@ const About = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.3 }}
           className="block"
         >
-          Transforming Ideas into
+          Transforming Ideas into <span className="lg:hidden inline">Functional</span>
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block pl-[60px]"
+          className="block lg:pl-[60px]"
         >
-          Functional{" "}
+          <span className="hidden lg:inline">Functional</span>{" "}
           <span className="inline">
             <TextType
               text={["Website", "Application"]}
@@ -41,8 +41,8 @@ const About = ({ id }: { id: string }) => {
         </motion.div>
       </TitleSection>
 
-      <BoxText className="mt-16">
-        <h4 className="text-[32px] font-semibold mb-5 leading-none">
+      <BoxText className="lg:mt-16 mt-12">
+        <h4 className="lg:text-[32px] text-3xl font-semibold mb-5 leading-none">
           Faiz Muazzam
         </h4>
         <p>
@@ -50,16 +50,17 @@ const About = ({ id }: { id: string }) => {
           graduated from Politeknik Negeri Jember in Information Management. My
           passion is building modern web applications, and I have strong skills
           in HTML, CSS, SASS, Tailwind CSS, JavaScript, React, and Next.js{" "}
-          <br />I previously worked as a Front-End Developer at Transcosmos
+          <br /> <br className="block lg:hidden" />
+          I previously worked as a Front-End Developer at Transcosmos
           Indonesia, where I helped create responsive and user-friendly
           interfaces. I am eager to keep learning, growing, and contributing in
           collaborative environments.
         </p>
       </BoxText>
 
-      <div className="grid grid-cols-2 my-6 gap-6">
+      <div className="grid lg:grid-cols-2 grid-cols-1 my-6 gap-6">
         <BoxText>
-          <div className="flex gap-x-2.5">
+          <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">
               <Icon icon="solar:palette-bold-duotone" width="56" height="56" />
             </div>
@@ -76,7 +77,7 @@ const About = ({ id }: { id: string }) => {
           </div>
         </BoxText>
         <BoxText>
-          <div className="flex gap-x-2.5">
+          <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">
               <Icon icon="solar:database-bold-duotone" width="56" height="56" />
             </div>
@@ -93,7 +94,7 @@ const About = ({ id }: { id: string }) => {
           </div>
         </BoxText>
         <BoxText>
-          <div className="flex gap-x-2.5">
+          <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">
               <Icon icon="icon-park-twotone:puzzle" width="56" height="56" />
             </div>
@@ -109,7 +110,7 @@ const About = ({ id }: { id: string }) => {
           </div>
         </BoxText>
         <BoxText>
-          <div className="flex gap-x-2.5">
+          <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">
               <Icon icon="la:tools" width="56" height="56" />
             </div>

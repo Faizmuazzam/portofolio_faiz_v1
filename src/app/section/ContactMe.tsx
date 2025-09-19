@@ -24,10 +24,10 @@ const ContactMe = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block pl-[60px]"
+          className="block lg:pl-[60px]"
         >
           Turn Ideas Into{" "}
-          <span className="inline">
+          <span className="lg:inline block">
             <TextType
               text={["Action", "Code"]}
               typingSpeed={75}
@@ -43,26 +43,26 @@ const ContactMe = ({ id }: { id: string }) => {
 
       <div className="mt-16">
         <BoxText>
-          <h5 className="text-[32px] font-semibold leading-tight">
+          <h5 className="lg:text-[32px] text-2xl font-semibold leading-tight">
             Let’s Work Together!
           </h5>
 
-          <div className="grid grid-cols-2 gap-6 mt-7">
+          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-7">
             <FormControls type="text" placeholder="Name" name="name" />
             <FormControls type="email" placeholder="Email" name="email" />
             <FormControls type="text" placeholder="Phone Number" name="phone" />
             <FormControls type="text" placeholder="Subject" name="subject" />
-            <div className="col-span-2">
+            <div className="lg:col-span-2">
               <TextAreaControls placeholder="Message" name="message" />
             </div>
           </div>
 
           <Link
             href={"#"}
-            className="flex justify-center items-center gap-x-2 mt-6 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold text-xl rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-amber-500 transition-all cursor-target"
+            className="flex justify-center items-center lg:gap-x-2 gap-x-1 mt-6 lg:px-5 px-5 lg:py-4 py-2.5 bg-amber-500 text-neutral-900 font-semibold lg:text-xl text-lg rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-amber-500 transition-all cursor-target"
           >
             SEND{" "}
-            <Icon icon="pepicons-print:paper-plane" width="24" height="24" />
+            <Icon icon="pepicons-print:paper-plane" className="lg:w-auto w-5" width="24" height="24" />
           </Link>
         </BoxText>
       </div>

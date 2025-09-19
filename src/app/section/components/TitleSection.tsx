@@ -17,14 +17,14 @@ export const TitleSection = ({
 }: TitleProps) => {
   return (
     <>
-      <div className="text-2xl mb-6">
+      <div className="lg:text-2xl text-lg mb-6">
         <motion.div
           initial={{ opacity: 0, translateX: 100 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1 }}
         >
           <p className="inline">
-            <span className="inline-block w-5 h-5 bg-amber-500 mr-3 rounded-full"></span>
+            <span className="inline-block lg:w-5 lg:h-5 w-3 h-3 bg-amber-500 mr-3 rounded-full"></span>
             {topSubTitle}
           </p>
           {textSubType && (
@@ -39,7 +39,7 @@ export const TitleSection = ({
           )}
         </motion.div>
       </div>
-      <h2 className="text-7xl font-semibold leading-tight">{children}</h2>
+      <h2 className="xl:text-7xl lg:text-5xl md:text-5xl text-4xl font-semibold leading-tight">{children}</h2>
     </>
   );
 };

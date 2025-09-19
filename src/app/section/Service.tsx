@@ -22,7 +22,7 @@ const Service = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block pl-[60px]"
+          className="block lg:pl-[60px]"
         >
           Powering{" "}
           <span className="text-[#FFAE00] underline font-playfair italic cursor-target">
@@ -31,9 +31,9 @@ const Service = ({ id }: { id: string }) => {
         </motion.div>
       </TitleSection>
 
-      <div className="flex flex-col gap-y-8 mt-16">
+      <div className="flex flex-col gap-y-8 lg:mt-16 mt-12">
         <BoxText>
-          <h5 className="text-[32px] leading-tight mb-5 font-semibold">
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
             Stunning Interfaces
           </h5>
           <p>
@@ -42,7 +42,7 @@ const Service = ({ id }: { id: string }) => {
           </p>
         </BoxText>
         <BoxText>
-          <h5 className="text-[32px] leading-tight mb-5 font-semibold">
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
             Powerful Back-End
           </h5>
           <p>
@@ -52,7 +52,7 @@ const Service = ({ id }: { id: string }) => {
           </p>
         </BoxText>
         <BoxText>
-          <h5 className="text-[32px] leading-tight mb-5 font-semibold">
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
             End-to-End Solutions
           </h5>
           <p>
@@ -62,7 +62,7 @@ const Service = ({ id }: { id: string }) => {
           </p>
         </BoxText>
         <BoxText>
-          <h5 className="text-[32px] leading-tight mb-5 font-semibold">
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
             Smart Integrations
           </h5>
           <p>
@@ -71,7 +71,7 @@ const Service = ({ id }: { id: string }) => {
           </p>
         </BoxText>
         <BoxText>
-          <h5 className="text-[32px] leading-tight mb-5 font-semibold">
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
             Modern Workflow
           </h5>
           <p>

@@ -23,9 +23,10 @@ const Skill = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block pl-[60px]"
+          className="block lg:pl-[60px]"
         >
           To Backend{" "}
+          <br className="lg:hidden block" />
           <span className="inline">
             <TextType
               text={["Brilliance", "Innovation", "Power"]}
@@ -40,7 +41,7 @@ const Skill = ({ id }: { id: string }) => {
         </motion.div>
       </TitleSection>
 
-      <div className="grid grid-cols-3 gap-6 mt-16">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:mt-16 mt-12">
         <BoxText className="flex flex-col justify-center items-center text-center">
           <div
             className="grid place-content-center w-[100px] h-[100px] rounded-[8px] mb-5"

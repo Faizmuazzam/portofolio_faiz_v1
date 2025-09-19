@@ -28,7 +28,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${figtreeSans.variable} ${playfairSans.variable}`}>
+    <html
+      lang="en"
+      className={`${figtreeSans.variable} ${playfairSans.variable}`}
+    >
       <body className={`antialiased dark`}>
         <main className="main wrapper relative w-full overflow-x-hidden">
           <div className="fixed inset-0 z-0 h-screen">
@@ -45,17 +48,21 @@ export default function RootLayout({
           </div>
           <TargetCursor spinDuration={2} hideDefaultCursor={true} />
           <div className="block min-h-screen w-screen overflow-x-hidden relative z-20">
-            <div className="absolute w-[1092px] top-0 right-0 translate-x-[30%] z-0">
+            <div className="absolute w-[1092px] top-0 right-0 translate-x-[30%] z-0 hidden xl:block">
               <div className="relative">
                 <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
               </div>
             </div>
             <Header />
-            <div className="flex max-w-[1320px] m-auto relative z-10">
-              <div className="w-[400px]">
+            <div className="lg:flex max-w-[1320px] m-auto relative z-10">
+              <div className="xl:w-[400px] lg:w-[320px] lg:pl-5">
                 <Sidebar />
               </div>
-              <div className="flex-1 content px-5 pt-20">{children}</div>
+              <div className="flex-1 content px-5 lg:pt-20 pt-16">
+                <div className="lg:max-w-full max-w-[540px] mx-auto">
+                  {children}
+                </div>
+              </div>
             </div>
           </div>
         </main>
