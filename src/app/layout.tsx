@@ -44,7 +44,7 @@ export default function RootLayout({
             />
           </div>
           <div className="absolute inset-0 z-10">
-            <div className="bg-black opacity-70 w-full h-full"></div>
+            <div className="bg-black md:opacity-70 opacity-60 w-full h-full"></div>
           </div>
           <TargetCursor spinDuration={2} hideDefaultCursor={true} />
           <div className="block min-h-screen w-screen overflow-x-hidden relative z-20">
@@ -55,10 +55,10 @@ export default function RootLayout({
             </div>
             <Header />
             <div className="lg:flex max-w-[1320px] m-auto relative z-10">
-              <div className="xl:w-[400px] lg:w-[320px] lg:pl-5">
+              <div className="xl:w-[400px] lg:w-[320px] xl:pl-0 lg:pl-5">
                 <Sidebar />
               </div>
-              <div className="flex-1 content px-5 lg:pt-20 pt-16">
+              <div className="flex-1 content px-5 lg:pt-20 pt-16 max-md:pt-6">
                 <div className="lg:max-w-full max-w-[540px] mx-auto">
                   {children}
                 </div>

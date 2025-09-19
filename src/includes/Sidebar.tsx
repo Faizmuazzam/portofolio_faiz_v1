@@ -64,16 +64,15 @@ const Sidebar = () => {
       <div className="hide lg:flex justify-center w-full">
         <div
           ref={sidebarRef}
-          className={`xl:pt-20 lg:pt-0 pt-20  transition-all duration-300 ${
+          className={`xl:pt-20 pt-0  transition-all duration-300 ${
             isFixed ? "lg:fixed top-0" : ""
           }`}
         >
-          <div className="relative max-w-full w-max mx-auto xl:scale-100 lg:scale-75">
+          <div className="relative max-w-full w-max mx-auto xl:scale-100 lg:scale-75 max-md:hidden">
             <motion.div
               initial={{ opacity: 0, translateX: -100 }}
               whileInView={{ opacity: 1, translateX: 0 }}
               transition={{ duration: 1 }}
-              className=""
             >
               <ProfileCard
                 name="Faiz Muazzam"

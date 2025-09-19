@@ -8,6 +8,8 @@ import { TitleSection } from "./components/TitleSection";
 import { BoxText } from "./components/BoxText";
 import StarBorder from "@/components/StarBorder";
 import { motion } from "motion/react";
+import ProfileCard from "@/components/ProfileCard";
+import { MenuItem } from "./components/MenuItem";
 
 const Home = ({ id }: { id: string }) => {
   return (
@@ -30,8 +32,7 @@ const Home = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.4 }}
           className="block lg:pl-[60px]"
         >
-          experiences{" "}
-          <br className="lg:hidden block" />
+          experiences <br className="lg:hidden block" />
           <span className="inline">
             <TextType
               text={["seamless", "creative", "modern", "impactful"]}
@@ -120,6 +121,46 @@ const Home = ({ id }: { id: string }) => {
             </div>
           </BoxText>
         </a>
+      </div>
+
+      <div className="relative max-w-full w-max mx-auto md:hidden mt-12 overflow-visible">
+        <motion.div
+          initial={{ opacity: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 1 }}
+        >
+          <ProfileCard
+            name="Faiz Muazzam"
+            title="Web Developer"
+            handle="faizmuazzam"
+            status="Online"
+            contactText="Contact Me"
+            avatarUrl="/assets/img/me_transparent.png"
+            grainUrl="/assets/img/grain.webp"
+            iconUrl="/assets/img/iconpattern.png"
+            behindGradient={`radial-gradient(
+              farthest-side circle at var(--pointer-x) var(--pointer-y),
+              hsla(30, 100%, 80%, var(--card-opacity)) 4%,
+              hsla(30, 80%, 70%, calc(var(--card-opacity)*0.75)) 10%,
+              hsla(30, 60%, 60%, calc(var(--card-opacity)*0.5)) 50%,
+              hsla(30, 0%, 50%, 0) 100%
+            ),
+            radial-gradient(35% 52% at 55% 20%, #ffb347c4 0%, #ff7e0050 100%),
+            radial-gradient(100% 100% at 50% 50%, #ff9f00ff 1%, #ff7e0050 76%),
+            conic-gradient(
+              from 124deg at 50% 50%,
+              #ff6a00ff 0%,
+              #ffc200ff 40%,
+              #ffc200ff 60%,
+              #ff6a00ff 100%
+            )`}
+            innerGradient={`linear-gradient(145deg, #ff9f008c 0%, #ffd58044 100%)`}
+            showUserInfo={true}
+            enableTilt={true}
+            enableMobileTilt={false}
+            onContactClick={() => console.log("Contact clicked")}
+          />
+        </motion.div>
       </div>
     </div>
   );

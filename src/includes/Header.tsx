@@ -1,10 +1,11 @@
 "use client";
 
-import FormControls from "@/app/section/components/FormControls";
+import NavMenuResponsive from "@/app/section/components/NavMenuResponsive";
+import Dock from "@/components/Dock";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const Header = () => {
@@ -18,9 +19,9 @@ const Header = () => {
   };
   return (
     <>
-      <header className="relative z-10 max-w-[1320px] mx-auto py-6 xl:px-0 px-5 hidden lg:block">
-        <div className="grid grid-cols-2 items-center">
-          <div className="logo max-w-[110px]">
+      <header className="relative z-10 lg:max-w-[1320px] max-w-[540px] mx-auto py-6 xl:px-0 px-5">
+        <div className="md:grid md:grid-cols-2 max-md:flex max-md:justify-between items-center">
+          <div className="logo md:max-w-[110px] max-w-[86px]">
             <Image
               src={"/assets/img/logo_main.png"}
               height={114}
@@ -29,8 +30,8 @@ const Header = () => {
               className="cursor-target"
             />
           </div>
-          <div className="flex justify-end items-center gap-x-5">
-            <div className="cursor-target">
+          <div className="flex justify-end items-center lg:gap-x-5 gap-x-3">
+            <div className="cursor-target hidden lg:block">
               <p className="text-2xl font-semibold">
                 <Icon
                   icon="twemoji:flag-indonesia"
@@ -41,12 +42,12 @@ const Header = () => {
                 Indonesia
               </p>
             </div>
-            <div className="">
+            <div className="hidden lg:block">
               <p className="text-2xl">|</p>
             </div>
             <Link
               href={"#"}
-              className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold text-xl rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
+              className="flex justify-center items-center gap-x-2 lg:px-5 px-4 lg:py-4 py-2 bg-amber-500 text-neutral-900 font-semibold lg:text-xl text-sm rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
             >
               HIRE ME
               <Icon icon="line-md:email-twotone" width="24" height="24" />
@@ -57,6 +58,7 @@ const Header = () => {
               className="cursor-pointer cursor-target"
             >
               <Icon
+                className="lg:w-auto lg:h-auto w-7 h-7"
                 icon="heroicons-outline:menu-alt-2"
                 width="40"
                 height="40"
@@ -68,7 +70,7 @@ const Header = () => {
       <div className="nav-menu">
         <AnimatePresence initial={false}>
           {isVisible && (
-            <div className="fixed h-screen w-screen inset-0 z-50">
+            <div className="fixed h-screen w-screen inset-0 z-50 overflow-auto">
               <motion.div
                 className="absolute inset-0 z-10"
                 style={{ backgroundColor: "rgba(0, 0 , 0, 0.5)" }}
@@ -84,10 +86,14 @@ const Header = () => {
                 exit={{ opacity: 1, translateX: "100%" }}
                 transition={{ duration: 0.5 }}
                 key="navSideRight"
-                className="side-right-nav h-screen w-[450px] bg-[#1b1610] relative z-20 ml-auto border-l-2 border-[#342a1a]"
+                className="side-right-nav h-screen max-w-[450px] bg-[#1b1610] relative z-30 ml-auto border-l-2 border-[#342a1a]"
               >
                 <div className="relative p-[50px] h-full">
-                  <button type="button" className="absolute top-6 right-8 text-red-700 cursor-target cursor-pointer" onClick={() => setIsVisible(!isVisible)}>
+                  <button
+                    type="button"
+                    className="absolute top-6 right-8 text-red-700 cursor-target cursor-pointer"
+                    onClick={() => setIsVisible(!isVisible)}
+                  >
                     <Icon icon="line-md:close-small" width="36" height="36" />
                   </button>
                   <div className="logo max-w-[125px]">
@@ -99,7 +105,7 @@ const Header = () => {
                       className="cursor-target"
                     />
                   </div>
-                  <ul className="mt-8 flex flex-col gap-8">
+                  <ul className="mt-8 flex flex-col lg:gap-8 gap-6">
                     <li>
                       <button
                         type="button"
@@ -155,7 +161,7 @@ const Header = () => {
                       </button>
                     </li>
                   </ul>
-                  <div className="mt-8">
+                  <div className="md:mt-8 mt-6">
                     <Link
                       href={"#"}
                       className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold text-xl rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
@@ -168,7 +174,7 @@ const Header = () => {
                       />
                     </Link>
                   </div>
-                  <div className="mt-8">
+                  <div className="md:mt-8 mt-6">
                     <p className="text-2xl font-bold mb-5 uppercase">
                       Social Links
                     </p>
@@ -217,12 +223,12 @@ const Header = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="mt-8">
+                  <div className="md:mt-8 mt-6">
                     <p className="text-2xl font-bold mb-5 uppercase">
                       Subscribe To Newsletter
                     </p>
                   </div>
-                  <div className="mt-6">
+                  <div className="md:mt-6 mt-4">
                     <div className="relative">
                       <input
                         className="p-5 font-medium rounded-full placeholder:text-neutral-300 focus:outline-amber-500 focus:outline-3 w-full cursor-target"
@@ -245,6 +251,8 @@ const Header = () => {
           )}
         </AnimatePresence>
       </div>
+
+      <NavMenuResponsive />
     </>
   );
 };
