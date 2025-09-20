@@ -47,7 +47,7 @@ const ContactMe = ({ id }: { id: string }) => {
             Let’s Work Together!
           </h5>
 
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-7">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-7">
             <FormControls type="text" placeholder="Name" name="name" />
             <FormControls type="email" placeholder="Email" name="email" />
             <FormControls type="text" placeholder="Phone Number" name="phone" />

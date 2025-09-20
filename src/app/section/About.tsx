@@ -58,7 +58,7 @@ const About = ({ id }: { id: string }) => {
         </p>
       </BoxText>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 my-6 gap-6">
+      <div className="grid md:grid-cols-2 grid-cols-1 my-6 gap-6">
         <BoxText>
           <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">

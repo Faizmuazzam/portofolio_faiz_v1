@@ -19,7 +19,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="relative z-10 lg:max-w-[1320px] max-w-[540px] mx-auto py-6 xl:px-0 px-5">
+      <header className="relative z-10 lg:max-w-[1320px] max-w-[768px] mx-auto py-6 xl:px-0 px-5">
         <div className="md:grid md:grid-cols-2 max-md:flex max-md:justify-between items-center">
           <div className="logo md:max-w-[110px] max-w-[86px]">
             <Image

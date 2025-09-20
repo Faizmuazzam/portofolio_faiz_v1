@@ -40,7 +40,7 @@ const Portofolio = ({ id }: { id: string }) => {
         </motion.div>
       </TitleSection>
 
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 lg:mt-16 mt-12">
+      <div className="grid md:grid-cols-2 grid-cols-1 gap-6 lg:mt-16 mt-12">
         <div className="col-span-2">
           <BoxImage
             width={1920}

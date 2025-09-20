@@ -59,7 +59,7 @@ export default function RootLayout({
                 <Sidebar />
               </div>
               <div className="flex-1 content px-5 lg:pt-20 pt-16 max-md:pt-6">
-                <div className="lg:max-w-full max-w-[540px] mx-auto">
+                <div className="lg:max-w-full max-w-[768px] mx-auto">
                   {children}
                 </div>
               </div>

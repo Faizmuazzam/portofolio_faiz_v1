@@ -63,7 +63,7 @@ const Home = ({ id }: { id: string }) => {
         initial={{ opacity: 0, translateX: 100 }}
         whileInView={{ opacity: 1, translateX: 0 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="flex justify-between lg:pr-10 mt-6 lg:mt-0"
+        className="flex lg:justify-between lg:pr-10 mt-6 lg:mt-0 gap-x-5"
       >
         <div className="relative block lg:w-[133px] lg:h-[133px] w-[100px] h-[100px] p-2 border border-white rounded-full bg-[#2c2918] cursor-target">
           <CircularText
