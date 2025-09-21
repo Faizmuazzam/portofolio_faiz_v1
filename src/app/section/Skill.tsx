@@ -17,7 +17,7 @@ const Skill = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.3 }}
           className="block"
         >
-          From Frontend Flair
+          The Skills Behind
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
@@ -25,11 +25,11 @@ const Skill = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.4 }}
           className="block lg:pl-[60px]"
         >
-          To Backend{" "}
+          Every Great{" "}
           <br className="lg:hidden block" />
           <span className="inline">
             <TextType
-              text={["Brilliance", "Innovation", "Power"]}
+              text={["Application", "Website"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -41,7 +41,7 @@ const Skill = ({ id }: { id: string }) => {
         </motion.div>
       </TitleSection>
 
-      <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 lg:mt-16 mt-12">
+      <div className="grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-6 lg:mt-16 mt-12">
         <BoxText className="flex flex-col justify-center items-center text-center">
           <div
             className="grid place-content-center w-[100px] h-[100px] rounded-[8px] mb-5"
@@ -49,9 +49,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="logos:react" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             90%
-          </h3>
+          </p> */}
           <p>React</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -61,9 +61,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="akar-icons:nextjs-fill" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             90%
-          </h3>
+          </p> */}
           <p>Next Js</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -73,9 +73,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="devicon:nodejs" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             85%
-          </h3>
+          </p> */}
           <p>Node Js</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -85,22 +85,10 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="logos:javascript" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             92%
-          </h3>
+          </p> */}
           <p>Javascript</p>
-        </BoxText>
-        <BoxText className="flex flex-col justify-center items-center text-center">
-          <div
-            className="grid place-content-center w-[100px] h-[100px] rounded-[8px] mb-5"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.1)" }}
-          >
-            <Icon icon="lineicons:expressjs" width="68" height="68" />
-          </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
-            86%
-          </h3>
-          <p>Express Js</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
           <div
@@ -109,9 +97,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="logos:tailwindcss-icon" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             93%
-          </h3>
+          </p> */}
           <p>Tailwind</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -121,9 +109,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="devicon:sass" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             92%
-          </h3>
+          </p> */}
           <p>Sass</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -133,9 +121,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="devicon:laravel" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             89%
-          </h3>
+          </p> */}
           <p>Laravel</p>
         </BoxText>
         <BoxText className="flex flex-col justify-center items-center text-center">
@@ -145,9 +133,9 @@ const Skill = ({ id }: { id: string }) => {
           >
             <Icon icon="logos:php" width="68" height="68" />
           </div>
-          <h3 className="text-[32px] mb-2.5 leading-tight font-semibold">
+          {/* <p className="text-[32px] mb-2.5 leading-tight font-semibold">
             87%
-          </h3>
+          </p> */}
           <p>PHP</p>
         </BoxText>
       </div>

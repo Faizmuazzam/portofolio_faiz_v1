@@ -10,6 +10,7 @@ import StarBorder from "@/components/StarBorder";
 import { motion } from "motion/react";
 import ProfileCard from "@/components/ProfileCard";
 import { MenuItem } from "./components/MenuItem";
+import { scrollToSection } from "@/lib/tools";
 
 const Home = ({ id }: { id: string }) => {
   return (
@@ -22,20 +23,20 @@ const Home = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="block"
+          className="inline md:block"
         >
-          Turning Ideas into
+          With code, I turn ideas{" "}
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block lg:pl-[60px]"
+          className="inline md:block lg:pl-[60px]"
         >
-          experiences <br className="lg:hidden block" />
-          <span className="inline">
+          into great{" "}
+          <span className="inline max-md:block">
             <TextType
-              text={["seamless", "creative", "modern", "impactful"]}
+              text={["creations", "webiste", "aplication"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -53,10 +54,7 @@ const Home = ({ id }: { id: string }) => {
         className="flex justify-end mt-6"
       >
         <p className="font-medium lg:w-2/3">
-          From concept to deployment, I craft applications that are fast,
-          responsive, and meaningful for users combining modern design, clean
-          code, and seamless functionality to deliver impactful digital
-          experiences.
+          I believe a good website is not only visually appealing but also lightweight and fast. That’s why I focus on creating websites that combine visual beauty with high performance.
         </p>
       </motion.div>
       <motion.div
@@ -84,7 +82,7 @@ const Home = ({ id }: { id: string }) => {
         <div className="flex lg:justify-center items-center mt-6 lg:mt-0">
           <StarBorder
             as="button"
-            className="relative  w-max max-w-full cursor-target"
+            className="relative  w-max max-w-full cursor-target cursor-pointer"
             color="#ff6a00ff"
             speed="5s"
             thickness={3}
@@ -103,7 +101,7 @@ const Home = ({ id }: { id: string }) => {
       </motion.div>
 
       <div className="block mt-8">
-        <a>
+        <button type="button" className="cursor-pointer w-full" onClick={() => scrollToSection('section-contact')}>
           <BoxText className="flex justify-center items-center gap-5 lg:py-6 py-5 lg:px-16 px:6 text-center">
             <span className="xl:text-6xl lg:text-4xl text-xl font-semibold">
               Lets Work Together
@@ -120,7 +118,7 @@ const Home = ({ id }: { id: string }) => {
               />
             </div>
           </BoxText>
-        </a>
+        </button>
       </div>
 
       <div className="relative max-w-full w-max mx-auto md:hidden mt-12 overflow-visible">

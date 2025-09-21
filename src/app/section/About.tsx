@@ -16,20 +16,20 @@ const About = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="block"
+          className="inline md:block"
         >
-          Transforming Ideas into <span className="lg:hidden inline">Functional</span>
+          Spreading happiness {" "}
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block lg:pl-[60px]"
+          className="inline md:block lg:pl-[60px]"
         >
-          <span className="hidden lg:inline">Functional</span>{" "}
-          <span className="inline">
+          through{" "}
+          <span className="inline max-md:block">
             <TextType
-              text={["Website", "Application"]}
+              text={["creation", "website", "application"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -46,15 +46,9 @@ const About = ({ id }: { id: string }) => {
           Faiz Muazzam
         </h4>
         <p>
-          I’m a web developer from Tulungagung, born on November 18, 2000. I
-          graduated from Politeknik Negeri Jember in Information Management. My
-          passion is building modern web applications, and I have strong skills
-          in HTML, CSS, SASS, Tailwind CSS, JavaScript, React, and Next.js{" "}
-          <br /> <br className="block lg:hidden" />
-          I previously worked as a Front-End Developer at Transcosmos
-          Indonesia, where I helped create responsive and user-friendly
-          interfaces. I am eager to keep learning, growing, and contributing in
-          collaborative environments.
+          I have 3 years of experience as a Front-End Web Developer and 1 year as a Full-Stack Web Developer. I love creating beautiful user interfaces that not only look great but also deliver fast performance. For me, it’s very satisfying when users enjoy interacting with an application.
+          <br /><br />
+          I build responsive, fast, and visually appealing websites using <span className="text-amber-500">React.js, Next.js, Typescript, Prima, TanStack, REST API, and Laravel.</span> I’m also a strong team player with good communication skills, making collaboration smooth and productive.
         </p>
       </BoxText>
 
@@ -69,9 +63,7 @@ const About = ({ id }: { id: string }) => {
                 Front-End Development
               </h5>
               <p>
-                I create responsive and modern interfaces with React.js and
-                Next.js, using TanStack Query for data handling and animations
-                with Framer Motion to deliver engaging user experiences.
+                Building modern, responsive, and SEO-friendly websites using React.js and Next.js. Designed with TailwindCSS for elegance, and enhanced with smooth animations for interactivity.
               </p>
             </div>
           </div>
@@ -86,9 +78,7 @@ const About = ({ id }: { id: string }) => {
                 Back-End Development
               </h5>
               <p>
-                I develop custom APIs, manage databases with Prisma, and
-                implement authentication and server-side logic for secure and
-                scalable applications.
+               Developing secure and efficient backend systems with Laravel and Prisma ORM. Includes REST API development, JWT authentication, and structured database management.
               </p>
             </div>
           </div>
@@ -100,11 +90,10 @@ const About = ({ id }: { id: string }) => {
             </div>
             <div className="block flex-1">
               <h5 className="text-xl font-semibold mb-3.5 leading-tight">
-                Full-Stack Capability
+                Database Management
               </h5>
               <p>
-                I am also proficient in Laravel, handling both front-end and
-                back-end to deliver complete end-to-end solutions.
+                Managing MySQL or PostgreSQL databases with Prisma, covering schema design, migrations, seeding, and query optimization for high performance.
               </p>
             </div>
           </div>
@@ -112,16 +101,14 @@ const About = ({ id }: { id: string }) => {
         <BoxText>
           <div className="flex flex-col xl:flex-row xl:gap-2.5 gap-5">
             <div className="block w-14">
-              <Icon icon="la:tools" width="56" height="56" />
+              <Icon icon="uim:rocket" width="56" height="56" />
             </div>
             <div className="block flex-1">
               <h5 className="text-xl font-semibold mb-3.5 leading-tight">
-                Tools & Workflow
+                Deployment & Optimization
               </h5>
               <p>
-                I use Git & GitHub, CI/CD pipelines, and Docker when needed. I
-                am comfortable working in Agile teams and collaborating with
-                tools like Jira and Figma.
+               Preparing websites to go live with a focus on performance optimization, caching, SEO best practices, and continuous maintenance to ensure long-term stability.
               </p>
             </div>
           </div>
@@ -137,25 +124,25 @@ const About = ({ id }: { id: string }) => {
           </motion.h5>
           <BoxText>
             <div className="block mb-8">
-              <p className="mb-4">2021 - 2022</p>
+              <p className="mb-4 text-amber-400">Apr, 2025 - Present</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
-                Front End Developer
+                Full-Stack Developer
               </p>
-              <p className="mt-4">Athechno</p>
+              <p className="mt-4">Transcosmos Indonesia</p>
             </div>
             <div className="block mb-8">
-              <p className="mb-4">2022 - 2024</p>
+              <p className="mb-4 text-amber-400">Jan, 2022 - Apr, 2025</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
-                Front End Developer
+                Front-End Developer
               </p>
               <p className="mt-4">Transcosmos Indonesia</p>
             </div>
             <div className="block">
-              <p className="mb-4">2024 - Present</p>
+              <p className="mb-4 text-amber-400">August, 2021 - Des, 2022</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
-                Full Stack Developer
+                Front-End Developer
               </p>
-              <p className="mt-4">Transcosmos Indonesia</p>
+              <p className="mt-4">Athechno</p>
             </div>
           </BoxText>
         </div>
@@ -170,14 +157,14 @@ const About = ({ id }: { id: string }) => {
           </motion.h5>
           <BoxText>
             <div className="block mb-8">
-              <p className="mb-4">2019 - 2021</p>
+              <p className="mb-4 text-amber-400">2019 - 2021</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
                 Diploma of Education
               </p>
               <p className="mt-4">Politeknik Negeri Jember</p>
             </div>
             <div className="block">
-              <p className="mb-4">2024 - Present</p>
+              <p className="mb-4 text-amber-400">2024 - Present</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
                 Bachelor’s degre
               </p>
@@ -191,31 +178,36 @@ const About = ({ id }: { id: string }) => {
             <div className="flex justify-center items-center gap-3">
               <Link
                 className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                href={"#"}
+                href={"https://www.instagram.com/faizmuazzam_/"}
+                target="_blank"
               >
                 <Icon icon="line-md:instagram" width="24" height="24" />
               </Link>
               <Link
                 className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                href={"#"}
+                href={"https://github.com/Faizmuazzam"}
+                target="_blank"
+
               >
                 <Icon icon="line-md:github-twotone" width="24" height="24" />
               </Link>
               <Link
                 className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                href={"#"}
+                href={"https://www.linkedin.com/in/faiz-muazzam-698460245/"}
+                target="_blank"
               >
                 <Icon icon="line-md:linkedin" width="24" height="24" />
               </Link>
               <Link
                 className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                href={"#"}
+                href={"mailto:faizmuazzam.fm7@gmail.com"}
               >
                 <Icon icon="line-md:email-twotone" width="24" height="24" />
               </Link>
               <Link
                 className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                href={"#"}
+                href={"https://youtube.com/@faiz-muazzam?si=hdrip9o6Wx7LynZe"}
+                target="_blank"
               >
                 <Icon icon="line-md:youtube-twotone" width="24" height="24" />
               </Link>

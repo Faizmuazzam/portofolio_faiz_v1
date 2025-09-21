@@ -17,7 +17,7 @@ const Portofolio = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.3 }}
           className="block"
         >
-          From Creative Concepts <span className="lg:hidden inline">To Live</span>
+          With Passion and Skill
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
@@ -25,17 +25,9 @@ const Portofolio = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.4 }}
           className="block lg:pl-[60px]"
         >
-          <span className="hidden lg:inline">To Live</span>{" "}
-          <span className="inline">
-            <TextType
-              text={["Applications", "Experiences"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor={true}
-              cursorCharacter="|"
-              textColors={["inherit"]}
-              className="text-[#FFAE00] underline font-playfair italic cursor-target"
-            />
+          Code Turns Into {" "}
+          <span className="inline text-[#FFAE00] underline font-playfair italic cursor-target">
+            Results
           </span>
         </motion.div>
       </TitleSection>
@@ -57,54 +49,40 @@ const Portofolio = ({ id }: { id: string }) => {
             transition={{ duration: 1, delay: 0.3 }}
             className="lg:text-[32px] text-2xl font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors"
           >
-            My Portofolio | Faiz Muazzam
+            Coming Soon ...
           </motion.h4>
         </div>
-        <div className="block">
-          <BoxImage
-            width={1920}
-            height={1080}
-            alt="Portofolio"
-            src="/assets/img/portofolio.jpg"
-            className="lg:shadow-lg shadow-md"
-          />
-        </div>
-        <div className="block">
-          <BoxImage
-            width={1920}
-            height={1080}
-            alt="Portofolio"
-            src="/assets/img/portofolio.jpg"
-            className="lg:shadow-lg shadow-md"
-          />
-        </div>
-        <div className="col-span-2">
-          <motion.h4
+       <div className="block">
+          <motion.div
             initial={{ opacity: 0, translateY: 100 }}
             whileInView={{ opacity: 1, translateY: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="lg:text-[32px] text-2xl font-semibold leading-tight mt-6 max-w-full w-max cursor-target hover:text-amber-500 transition-colors"
+            className="grid place-content-center min-h-[240px] w-full rounded-[8px] shadow-md shadow-amber-600 "
+            style={{
+              backgroundColor: "rgba(44, 41, 24, 0.5)",
+              backdropFilter: "blur(5px)"
+            }}
           >
-            My Portofolio | Faiz Muazzam
-          </motion.h4>
+            <span className="text-xl font-medium">
+              Coming Soon ...
+            </span>
+          </motion.div>
         </div>
         <div className="block">
-          <BoxImage
-            width={1920}
-            height={1080}
-            alt="Portofolio"
-            src="/assets/img/portofolio.jpg"
-            className="lg:shadow-lg shadow-md"
-          />
-        </div>
-        <div className="block">
-          <BoxImage
-            width={1920}
-            height={1080}
-            alt="Portofolio"
-            src="/assets/img/portofolio.jpg"
-            className="lg:shadow-lg shadow-md"
-          />
+          <motion.div
+            initial={{ opacity: 0, translateY: 100 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            className="grid place-content-center min-h-[240px] w-full rounded-[8px] shadow-md shadow-amber-600 "
+            style={{
+              backgroundColor: "rgba(44, 41, 24, 0.5)",
+              backdropFilter: "blur(5px)"
+            }}
+          >
+            <span className="text-xl font-medium">
+              Coming Soon ...
+            </span>
+          </motion.div>
         </div>
       </div>
     </div>

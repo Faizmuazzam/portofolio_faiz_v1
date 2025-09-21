@@ -11,14 +11,14 @@ import { motion } from "motion/react";
 const ContactMe = ({ id }: { id: string }) => {
   return (
     <div className="section-portofolio mt-14" id={id}>
-      <TitleSection topSubTitle="My Portofolio">
+      <TitleSection topSubTitle="My Contact">
         <motion.span
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
           className="block"
         >
-          Let’s Build Something
+          Let’s Work Together
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
@@ -26,17 +26,9 @@ const ContactMe = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.4 }}
           className="block lg:pl-[60px]"
         >
-          Turn Ideas Into{" "}
-          <span className="lg:inline block">
-            <TextType
-              text={["Action", "Code"]}
-              typingSpeed={75}
-              pauseDuration={1500}
-              showCursor={true}
-              cursorCharacter="|"
-              textColors={["inherit"]}
-              className="text-[#FFAE00] underline font-playfair italic cursor-target"
-            />
+          On Your Next {" "}
+          <span className="text-[#FFAE00] underline font-playfair italic cursor-target">
+            Project
           </span>
         </motion.div>
       </TitleSection>
@@ -44,7 +36,7 @@ const ContactMe = ({ id }: { id: string }) => {
       <div className="mt-16">
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl font-semibold leading-tight">
-            Let’s Work Together!
+            Get In Touch
           </h5>
 
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6 mt-7">

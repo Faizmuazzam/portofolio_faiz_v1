@@ -1,7 +1,7 @@
 "use client";
 
 import NavMenuResponsive from "@/app/section/components/NavMenuResponsive";
-import Dock from "@/components/Dock";
+import { scrollToSection } from "@/lib/tools";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -10,13 +10,6 @@ import { useState } from "react";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 50;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
   return (
     <>
       <header className="relative z-10 lg:max-w-[1320px] max-w-[768px] mx-auto py-6 xl:px-0 px-5">

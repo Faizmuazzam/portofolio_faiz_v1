@@ -16,7 +16,7 @@ const Service = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.3 }}
           className="block"
         >
-          Crafting Interfaces
+          Turning Your Ideas
         </motion.span>
         <motion.div
           initial={{ opacity: 0, translateX: 150 }}
@@ -24,9 +24,9 @@ const Service = ({ id }: { id: string }) => {
           transition={{ duration: 1, delay: 0.4 }}
           className="block lg:pl-[60px]"
         >
-          Powering{" "}
+          Into{" "}
           <span className="text-[#FFAE00] underline font-playfair italic cursor-target">
-            Backends
+            Powerful Code
           </span>
         </motion.div>
       </TitleSection>
@@ -34,49 +34,58 @@ const Service = ({ id }: { id: string }) => {
       <div className="flex flex-col gap-y-8 lg:mt-16 mt-12">
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
-            Stunning Interfaces
+            Modern Website Development
           </h5>
           <p>
-            I craft clean, responsive, and modern UIs with React.js, Next.js,
-            and Tailwind CSS, ensuring every design feels smooth and engaging.
+            I specialize in creating modern websites that combine clean design, smooth animations, and optimized performance. Every project I build is crafted to not only look visually stunning but also deliver a fast and reliable user experience. With the latest tools and frameworks, I make sure your website feels fresh, professional, and ready to stand out in the digital world.
           </p>
         </BoxText>
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
-            Powerful Back-End
+            Custom CMS Solutions
           </h5>
           <p>
-            From custom APIs to secure database management with Prisma or
-            Laravel, I build robust systems that keep applications running
-            flawlessly.
+            Managing content should be simple. That’s why I design and develop custom Content Management Systems (CMS) tailored to your specific needs. With an intuitive interface and flexible features, you can easily update, organize, and publish content without any technical background. My goal is to give you full control over your website while keeping everything efficient and hassle-free.
           </p>
         </BoxText>
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
-            End-to-End Solutions
+            Responsive Website Design
           </h5>
           <p>
-            I deliver complete web applications from architecture to deployment,
-            bringing ideas to life with seamless front-end and back-end
-            integration.
+            In today’s world, your website must adapt to every screen size. I build fully responsive websites that look great and function seamlessly on desktops, tablets, and smartphones. From layout adjustments to performance optimization, I ensure every visitor enjoys a smooth and consistent experience no matter what device they use.
           </p>
         </BoxText>
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
-            Smart Integrations
+            API Integration
           </h5>
           <p>
-            I connect apps with APIs and third-party services to ensure data
-            flows smoothly, securely, and efficiently across platforms.
+            I can integrate third-party APIs to add powerful features to your website, such as payment gateways, maps, authentication, and more. This makes your website more dynamic and connected to the tools your business needs.
           </p>
         </BoxText>
         <BoxText>
           <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
-            Modern Workflow
+            Website Optimization (Performance & SEO)
           </h5>
           <p>
-            Using Git, GitHub, CI/CD, and Agile collaboration, I streamline
-            development and deliver projects faster with reliable results.
+            I optimize websites for speed, SEO, and best practices to ensure fast load times and better visibility on search engines helping your website reach more users.
+          </p>
+        </BoxText>
+        <BoxText>
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
+            E-Commerce Development
+          </h5>
+          <p>
+            I develop custom online stores with smooth checkout processes, secure payment systems, and responsive designs to help your business grow digitally.
+          </p>
+        </BoxText>
+        <BoxText>
+          <h5 className="lg:text-[32px] text-2xl leading-tight lg:mb-5 mb-3.5 font-semibold">
+            UI/UX Implementation
+          </h5>
+          <p>
+            I bring designs to life with clean, pixel-perfect code, ensuring that the user experience is intuitive, engaging, and consistent across all pages.
           </p>
         </BoxText>
       </div>
