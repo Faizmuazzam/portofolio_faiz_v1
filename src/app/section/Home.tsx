@@ -1,16 +1,14 @@
 "use client";
 
 import CircularText from "@/components/CircularText";
-import TextType from "@/components/TextType";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import Image from "next/image";
-import { TitleSection } from "./components/TitleSection";
-import { BoxText } from "./components/BoxText";
-import StarBorder from "@/components/StarBorder";
-import { motion } from "motion/react";
 import ProfileCard from "@/components/ProfileCard";
-import { MenuItem } from "./components/MenuItem";
+import StarBorder from "@/components/StarBorder";
+import TextType from "@/components/TextType";
 import { scrollToSection } from "@/lib/tools";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { motion } from "motion/react";
+import { BoxText } from "./components/BoxText";
+import { TitleSection } from "./components/TitleSection";
 
 const Home = ({ id }: { id: string }) => {
   return (

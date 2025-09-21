@@ -1,12 +1,11 @@
 "use client"
 
-import TextType from "@/components/TextType";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import { motion } from "motion/react";
+import Link from "next/link";
 import { BoxText } from "./components/BoxText";
 import FormControls, { TextAreaControls } from "./components/FormControls";
 import { TitleSection } from "./components/TitleSection";
-import Link from "next/link";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import { motion } from "motion/react";
 
 const ContactMe = ({ id }: { id: string }) => {
   return (

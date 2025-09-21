@@ -40,10 +40,6 @@ type DockItemProps = {
   magnification: number;
 };
 
-type HoverableProps = {
-  isHovered?: boolean;
-};
-
 function DockItem({
   children,
   className = '',
