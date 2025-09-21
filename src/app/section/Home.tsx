@@ -34,7 +34,7 @@ const Home = ({ id }: { id: string }) => {
           into great{" "}
           <span className="inline max-md:block">
             <TextType
-              text={["creations", "webiste", "aplication"]}
+              text={["creations", "website", "aplication"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
