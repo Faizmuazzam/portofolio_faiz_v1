@@ -1,11 +1,8 @@
 "use client";
 
-import TextType from "@/components/TextType";
-import React from "react";
-import { TitleSection } from "./components/TitleSection";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { BoxImage } from "./components/BoxImage";
+import { TitleSection } from "./components/TitleSection";
 
 const Portofolio = ({ id }: { id: string }) => {
   return (
