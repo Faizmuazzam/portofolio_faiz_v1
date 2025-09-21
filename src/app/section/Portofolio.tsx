@@ -12,7 +12,7 @@ const Portofolio = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="block"
+          className="block max-md:inline"
         >
           With Passion and Skill
         </motion.span>
@@ -20,7 +20,7 @@ const Portofolio = ({ id }: { id: string }) => {
           initial={{ opacity: 0, translateX: 150 }}
           whileInView={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="block lg:pl-[60px]"
+          className="block max-md:inline lg:pl-[60px]"
         >
           Code Turns Into {" "}
           <span className="inline text-[#FFAE00] underline font-playfair italic cursor-target">
@@ -49,7 +49,7 @@ const Portofolio = ({ id }: { id: string }) => {
             Coming Soon ...
           </motion.h4>
         </div>
-       <div className="block">
+       <div className="block max-md:col-span-2">
           <motion.div
             initial={{ opacity: 0, translateY: 100 }}
             whileInView={{ opacity: 1, translateY: 0 }}
@@ -65,7 +65,7 @@ const Portofolio = ({ id }: { id: string }) => {
             </span>
           </motion.div>
         </div>
-        <div className="block">
+        <div className="block max-md:col-span-2">
           <motion.div
             initial={{ opacity: 0, translateY: 100 }}
             whileInView={{ opacity: 1, translateY: 0 }}
