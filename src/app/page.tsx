@@ -1,9 +1,23 @@
-import React from 'react'
+import Home from "./section/Home";
+import About from "./section/About";
+import Service from "./section/Service";
+import Skill from "./section/Skill";
+import Portofolio from "./section/Portofolio";
+import ContactMe from "./section/ContactMe";
+import Footer from "@/includes/Footer";
 
-const Home = () => {
+const Page = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Home id="section-home" />
+      <About id="section-about" />
+      <Service id="section-service" />
+      <Skill id="section-skill" />
+      <Portofolio id="section-portofolio" />
+      <ContactMe id="section-contact" />
+      <Footer />
+    </>
+  );
+};
 
-export default Home
+export default Page;
