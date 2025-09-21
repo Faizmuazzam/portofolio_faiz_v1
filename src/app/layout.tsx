@@ -49,7 +49,9 @@ export default function RootLayout({
           <div className="absolute inset-0 z-10">
             <div className="bg-black md:opacity-70 opacity-60 w-full h-full"></div>
           </div>
-          <TargetCursor spinDuration={2} hideDefaultCursor={true} />
+          <div className="max-lg:hidden">
+            <TargetCursor spinDuration={2} hideDefaultCursor={true} />
+          </div>
           <div className="block min-h-screen w-screen overflow-x-hidden relative z-20">
             <div className="absolute w-[1092px] top-0 right-0 translate-x-[30%] z-0 hidden xl:block">
               <div className="relative">
