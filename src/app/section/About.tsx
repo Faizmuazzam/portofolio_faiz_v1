@@ -177,14 +177,14 @@ const About = ({ id }: { id: string }) => {
             </p>
             <div className="flex justify-center items-center gap-3">
               <Link
-                className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                className="grid place-content-center md:w-[50px] w-[42px] md:h-[50px] h-[42px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                 href={"https://www.instagram.com/faizmuazzam_/"}
                 target="_blank"
               >
                 <Icon icon="line-md:instagram" width="24" height="24" />
               </Link>
               <Link
-                className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                className="grid place-content-center md:w-[50px] w-[42px] md:h-[50px] h-[42px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                 href={"https://github.com/Faizmuazzam"}
                 target="_blank"
 
@@ -192,20 +192,20 @@ const About = ({ id }: { id: string }) => {
                 <Icon icon="line-md:github-twotone" width="24" height="24" />
               </Link>
               <Link
-                className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                className="grid place-content-center md:w-[50px] w-[42px] md:h-[50px] h-[42px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                 href={"https://www.linkedin.com/in/faiz-muazzam-698460245/"}
                 target="_blank"
               >
                 <Icon icon="line-md:linkedin" width="24" height="24" />
               </Link>
               <Link
-                className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                className="grid place-content-center md:w-[50px] w-[42px] md:h-[50px] h-[42px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                 href={"mailto:faizmuazzam.fm7@gmail.com"}
               >
                 <Icon icon="line-md:email-twotone" width="24" height="24" />
               </Link>
               <Link
-                className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                className="grid place-content-center md:w-[50px] w-[42px] md:h-[50px] h-[42px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                 href={"https://youtube.com/@faiz-muazzam?si=hdrip9o6Wx7LynZe"}
                 target="_blank"
               >
