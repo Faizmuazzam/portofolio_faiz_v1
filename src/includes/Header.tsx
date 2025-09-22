@@ -79,7 +79,7 @@ const Header = () => {
                 exit={{ opacity: 1, translateX: "100%" }}
                 transition={{ duration: 0.5 }}
                 key="navSideRight"
-                className="side-right-nav h-screen max-w-[450px] bg-[#1b1610] relative z-30 ml-auto border-l-2 border-[#342a1a]"
+                className="side-right-nav min-h-screen max-w-[450px] bg-[#1b1610] relative z-30 ml-auto border-l-2 border-[#342a1a]"
               >
                 <div className="relative p-[50px] h-full">
                   <button
@@ -157,7 +157,7 @@ const Header = () => {
                   <div className="md:mt-8 mt-6">
                     <Link
                       href={"#"}
-                      className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold text-xl rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
+                      className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold md:text-xl  rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
                     >
                       <span className="uppercase">Get in touch now</span>
                       <Icon
@@ -168,47 +168,52 @@ const Header = () => {
                     </Link>
                   </div>
                   <div className="md:mt-8 mt-6">
-                    <p className="text-2xl font-bold mb-5 uppercase">
+                    <p className="text-2xl max-md:text-xl font-bold mb-5 uppercase">
                       Social Links
                     </p>
                     <div className="flex justify-start items-center gap-3">
                       <Link
-                        className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                        href={"#"}
-                      >
-                        <Icon icon="line-md:instagram" width="24" height="24" />
-                      </Link>
-                      <Link
-                        className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                        className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                         href={"#"}
                       >
                         <Icon
+                          className="max-md:w-[18px]" icon="line-md:instagram" width="24" height="24" />
+                      </Link>
+                      <Link
+                        className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                        href={"#"}
+                      >
+                        <Icon
+                          className="max-md:w-[18px]"
                           icon="line-md:github-twotone"
                           width="24"
                           height="24"
                         />
                       </Link>
                       <Link
-                        className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
-                        href={"#"}
-                      >
-                        <Icon icon="line-md:linkedin" width="24" height="24" />
-                      </Link>
-                      <Link
-                        className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                        className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                         href={"#"}
                       >
                         <Icon
+                          className="max-md:w-[18px]" icon="line-md:linkedin" width="24" height="24" />
+                      </Link>
+                      <Link
+                        className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                        href={"#"}
+                      >
+                        <Icon
+                          className="max-md:w-[18px]"
                           icon="line-md:email-twotone"
                           width="24"
                           height="24"
                         />
                       </Link>
                       <Link
-                        className="grid place-content-center w-[50px] h-[50px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
+                        className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
                         href={"#"}
                       >
                         <Icon
+                          className="max-md:w-[18px]"
                           icon="line-md:youtube-twotone"
                           width="24"
                           height="24"
@@ -217,14 +222,14 @@ const Header = () => {
                     </div>
                   </div>
                   <div className="md:mt-8 mt-6">
-                    <p className="text-2xl font-bold mb-5 uppercase">
+                    <p className="text-2xl max-md:text-xl font-bold mb-5 uppercase">
                       Subscribe To Newsletter
                     </p>
                   </div>
                   <div className="md:mt-6 mt-4">
                     <div className="relative">
                       <input
-                        className="p-5 font-medium rounded-full placeholder:text-neutral-300 focus:outline-amber-500 focus:outline-3 w-full cursor-target"
+                        className="p-5 font-medium rounded-full max-md:text-sm placeholder:text-neutral-300 focus:outline-amber-500 focus:outline-3 w-full cursor-target"
                         type={"email"}
                         name={"subscribe"}
                         placeholder={"Email Address*"}
@@ -232,7 +237,7 @@ const Header = () => {
                       />
                       <button
                         type="button"
-                        className="absolute top-1 right-1 bottom-1 flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold text-[15px] uppercase rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
+                        className="absolute top-1 right-1 bottom-1 flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold max-md:text-sm text-[15px] uppercase rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
                       >
                         Subscribe
                       </button>
