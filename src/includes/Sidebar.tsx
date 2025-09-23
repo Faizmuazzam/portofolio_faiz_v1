@@ -54,9 +54,8 @@ const Sidebar = () => {
       <div className="hide lg:flex justify-center w-full">
         <div
           ref={sidebarRef}
-          className={`xl:pt-20 pt-0  transition-all duration-300 ${
-            isFixed ? "lg:fixed top-0" : ""
-          }`}
+          className={`xl:pt-20 pt-0  transition-all duration-300 ${isFixed ? "lg:fixed top-0" : ""
+            }`}
         >
           <div className="relative max-w-full w-max mx-auto xl:scale-100 lg:scale-75 max-md:hidden">
             <motion.div
@@ -93,7 +92,7 @@ const Sidebar = () => {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
-                onContactClick={() => console.log("Contact clicked")}
+                onContactClick={() => scrollToSection("section-contact")}
               />
             </motion.div>
 
