@@ -22,16 +22,15 @@ const ContactMe = ({ id }: { id: string }) => {
   const [status, setStatus] = useState<"success" | "error" | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    console.log(e.target.name, e.target.value);
-
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-
-    console.log('form', form);
+    console.log('NEXT_PUBLIC_EMAILJS_SERVICE_ID', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+    console.log('NEXT_PUBLIC_EMAILJS_TEMPLATE_ID', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+    console.log('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
 
     emailjs
       .send(
