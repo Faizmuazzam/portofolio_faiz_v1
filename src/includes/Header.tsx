@@ -156,8 +156,8 @@ const Header = () => {
                     </li>
                   </ul>
                   <div className="md:mt-8 mt-6">
-                    <Link
-                      href={"#"}
+                    <button
+                      onClick={() => scrollToSection("section-contact")}
                       className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold md:text-xl  rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
                     >
                       <span className="uppercase">Get in touch now</span>
@@ -166,7 +166,7 @@ const Header = () => {
                         width="24"
                         height="24"
                       />
-                    </Link>
+                    </button>
                   </div>
                   <div className="md:mt-8 mt-6">
                     <p className="text-2xl max-md:text-xl font-bold mb-5 uppercase">
