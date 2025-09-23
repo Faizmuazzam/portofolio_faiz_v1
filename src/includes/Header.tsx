@@ -39,11 +39,12 @@ const Header = () => {
               <p className="text-2xl">|</p>
             </div>
             <Link
-              href={"#"}
+              href={"https://wa.me/6281912940523"}
+              target="_blank"
               className="flex justify-center items-center gap-x-2 lg:px-5 px-4 lg:py-4 py-2 bg-amber-500 text-neutral-900 font-semibold lg:text-xl text-sm rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
             >
-              HIRE ME
-              <Icon icon="line-md:email-twotone" width="24" height="24" />
+              Chat via WhatsApp
+              <Icon icon="ic:baseline-whatsapp" width="24" height="24" />
             </Link>
             <button
               onClick={() => setIsVisible(!isVisible)}
@@ -63,7 +64,7 @@ const Header = () => {
       <div className="nav-menu">
         <AnimatePresence initial={false}>
           {isVisible && (
-            <div className="fixed h-screen w-screen inset-0 z-50 overflow-auto">
+            <div className="fixed h-screen w-screen inset-0 z-50 overflow-y-auto overflow-x-hidden">
               <motion.div
                 className="absolute inset-0 z-10"
                 style={{ backgroundColor: "rgba(0, 0 , 0, 0.5)" }}
@@ -155,8 +156,8 @@ const Header = () => {
                     </li>
                   </ul>
                   <div className="md:mt-8 mt-6">
-                    <Link
-                      href={"#"}
+                    <button
+                      onClick={() => scrollToSection("section-contact")}
                       className="flex justify-center items-center gap-x-2 px-5 py-4 bg-amber-500 text-neutral-900 font-semibold md:text-xl  rounded-full w-max max-w-full hover:bg-transparent border-amber-500 border-2 hover:text-white hover:border-white transition-all cursor-target"
                     >
                       <span className="uppercase">Get in touch now</span>
@@ -165,7 +166,7 @@ const Header = () => {
                         width="24"
                         height="24"
                       />
-                    </Link>
+                    </button>
                   </div>
                   <div className="md:mt-8 mt-6">
                     <p className="text-2xl max-md:text-xl font-bold mb-5 uppercase">
@@ -221,7 +222,7 @@ const Header = () => {
                       </Link>
                     </div>
                   </div>
-                  <div className="md:mt-8 mt-6">
+                  {/* <div className="md:mt-8 mt-6">
                     <p className="text-2xl max-md:text-xl font-bold mb-5 uppercase">
                       Subscribe To Newsletter
                     </p>
@@ -242,7 +243,7 @@ const Header = () => {
                         Subscribe
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
             </div>

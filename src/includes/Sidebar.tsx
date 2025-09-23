@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { MenuItem } from "../app/section/components/MenuItem";
 import Lenis from "@studio-freight/lenis";
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/tools";
 
 const Sidebar = () => {
   const [hovered, setHovered] = useState(false);
@@ -31,17 +32,6 @@ const Sidebar = () => {
     };
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el && lenisRef.current) {
-      lenisRef.current.scrollTo(el, {
-        offset: -50, // kalau mau ada offset misalnya navbar fixed
-        duration: 2, // override durasi (detik)
-        easing: (t) => t * (2 - t), // easing quadratic
-      });
-    }
-  };
-
   useEffect(() => {
     if (!sidebarRef.current) return;
     const rect = sidebarRef.current.getBoundingClientRect();
@@ -64,9 +54,8 @@ const Sidebar = () => {
       <div className="hide lg:flex justify-center w-full">
         <div
           ref={sidebarRef}
-          className={`xl:pt-20 pt-0  transition-all duration-300 ${
-            isFixed ? "lg:fixed top-0" : ""
-          }`}
+          className={`xl:pt-20 pt-0  transition-all duration-300 ${isFixed ? "lg:fixed top-0" : ""
+            }`}
         >
           <div className="relative max-w-full w-max mx-auto xl:scale-100 lg:scale-75 max-md:hidden">
             <motion.div
@@ -103,7 +92,7 @@ const Sidebar = () => {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
-                onContactClick={() => console.log("Contact clicked")}
+                onContactClick={() => scrollToSection("section-contact")}
               />
             </motion.div>
 
