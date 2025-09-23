@@ -17,7 +17,6 @@ const FormControls = ({ type = "text", name, placeholder, value, required = fals
       name={name}
       placeholder={placeholder}
       onChange={(e) => {
-        if (!e.target.value.trim()) return false;
         handleChange && handleChange(e);
       }}
       value={value}
