@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { MenuItem } from "../app/section/components/MenuItem";
 import Lenis from "@studio-freight/lenis";
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/tools";
 
 const Sidebar = () => {
   const [hovered, setHovered] = useState(false);
@@ -30,17 +31,6 @@ const Sidebar = () => {
       lenis.destroy();
     };
   }, []);
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el && lenisRef.current) {
-      lenisRef.current.scrollTo(el, {
-        offset: -50, // kalau mau ada offset misalnya navbar fixed
-        duration: 2, // override durasi (detik)
-        easing: (t) => t * (2 - t), // easing quadratic
-      });
-    }
-  };
 
   useEffect(() => {
     if (!sidebarRef.current) return;
