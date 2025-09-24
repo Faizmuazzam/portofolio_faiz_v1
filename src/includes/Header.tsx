@@ -21,6 +21,7 @@ const Header = () => {
               width={199}
               alt="Logo"
               className="cursor-target"
+              priority
             />
           </div>
           <div className="flex justify-end items-center lg:gap-x-5 gap-x-3">
@@ -97,6 +98,7 @@ const Header = () => {
                       width={199}
                       alt="Logo"
                       className="cursor-target"
+                      priority
                     />
                   </div>
                   <ul className="mt-8 flex flex-col lg:gap-8 gap-6">
@@ -178,7 +180,11 @@ const Header = () => {
                         href={"#"}
                       >
                         <Icon
-                          className="max-md:w-[18px]" icon="line-md:instagram" width="24" height="24" />
+                          className="max-md:w-[18px]"
+                          icon="line-md:instagram"
+                          width="24"
+                          height="24"
+                        />
                       </Link>
                       <Link
                         className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"
@@ -196,7 +202,11 @@ const Header = () => {
                         href={"#"}
                       >
                         <Icon
-                          className="max-md:w-[18px]" icon="line-md:linkedin" width="24" height="24" />
+                          className="max-md:w-[18px]"
+                          icon="line-md:linkedin"
+                          width="24"
+                          height="24"
+                        />
                       </Link>
                       <Link
                         className="grid place-content-center md:w-[50px] w-[40px] md:h-[50px] h-[40px] border border-white rounded-full cursor-target hover:bg-amber-500 hover:border-amber-500 transition-all"

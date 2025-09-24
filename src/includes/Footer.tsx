@@ -15,6 +15,7 @@ const Footer = () => {
               height={114}
               width={199}
               alt="Logo"
+              priority
             />
           </button>
         </div>
