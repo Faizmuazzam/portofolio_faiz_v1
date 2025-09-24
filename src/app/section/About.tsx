@@ -131,7 +131,7 @@ const About = ({ id }: { id: string }) => {
               <p className="mt-4">Transcosmos Indonesia</p>
             </div>
             <div className="block mb-8">
-              <p className="mb-4 text-amber-400">Jan, 2022 - Apr, 2025</p>
+              <p className="mb-4 text-amber-400">Jan, 2023 - Apr, 2025</p>
               <p className="text-2xl font-semibold leading-tight cursor-target w-max max-w-full hover:text-amber-500">
                 Front-End Developer
               </p>
