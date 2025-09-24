@@ -1,13 +1,12 @@
 "use client"
 
+import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { AnimatePresence, motion } from "motion/react";
-import Link from "next/link";
+import { useState } from "react";
 import { BoxText } from "./components/BoxText";
 import FormControls, { TextAreaControls } from "./components/FormControls";
 import { TitleSection } from "./components/TitleSection";
-import { useState } from "react";
-import emailjs from "emailjs-com";
 
 const ContactMe = ({ id }: { id: string }) => {
   const [form, setForm] = useState({

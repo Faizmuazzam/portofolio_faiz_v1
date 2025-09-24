@@ -1,3 +1,5 @@
+"use client";
+
 import Home from "./section/Home";
 import About from "./section/About";
 import Service from "./section/Service";
@@ -5,6 +7,17 @@ import Skill from "./section/Skill";
 import Portofolio from "./section/Portofolio";
 import ContactMe from "./section/ContactMe";
 import Footer from "@/includes/Footer";
+
+// Override console.warn
+if (typeof window !== "undefined") {
+  const originalWarn = console.warn;
+  console.warn = (...args) => {
+    if (typeof args[0] === "string" && args[0].includes("using deprecated parameters")) {
+      return;
+    }
+    originalWarn(...args);
+  };
+}
 
 const Page = () => {
   return (

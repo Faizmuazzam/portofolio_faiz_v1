@@ -3,7 +3,7 @@
 import ProfileCard from "@/components/ProfileCard";
 import { useEffect, useRef, useState } from "react";
 import { MenuItem } from "../app/section/components/MenuItem";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import { motion } from "framer-motion";
 import { scrollToSection } from "@/lib/tools";
 
