@@ -28,6 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "global.d.ts",
+    "three-augmentations.d.ts",
     "vite-env.d.ts"
   ],
   "exclude": ["node_modules"]

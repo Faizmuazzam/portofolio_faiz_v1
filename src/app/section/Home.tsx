@@ -9,6 +9,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "motion/react";
 import { BoxText } from "./components/BoxText";
 import { TitleSection } from "./components/TitleSection";
+import Link from "next/link";
 
 const Home = ({ id }: { id: string }) => {
   return (
@@ -77,7 +78,7 @@ const Home = ({ id }: { id: string }) => {
             />
           </div>
         </div>
-        <div className="flex lg:justify-center items-center mt-6 lg:mt-0">
+        <a href={'/assets/doc/CV_Faiz_Muazzam.pdf'} download className="flex lg:justify-center items-center mt-6 lg:mt-0">
           <StarBorder
             as="button"
             className="relative  w-max max-w-full cursor-target cursor-pointer"
@@ -95,7 +96,7 @@ const Home = ({ id }: { id: string }) => {
               />
             </span>
           </StarBorder>
-        </div>
+        </a>
       </motion.div>
 
       <div className="block mt-8">
